@@ -68,7 +68,7 @@
       "value": "CUSTOM:PlantOfTheCatDemon"
     },
     "livingSound": {
-      "value": "entity.ghast.warn"
+      "value": "entity.ghast.hurt"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"
