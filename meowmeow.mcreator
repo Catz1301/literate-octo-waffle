@@ -1,0 +1,169 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "PlantOfTheCatDemonNeighbourBlockChanges",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlantOfTheCatDemonNeighbourBlockChangesMobplayerCollidesWithPlant",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlantOfTheCatDemon",
+      "type": "plant",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CatDemon",
+      "type": "mob",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CaliforniaEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "California",
+      "type": "block",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CaliforniaDirt",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BadBad",
+      "type": "biome",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "b",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.meowmeow.catdemon": "Cat Demon Spawn Egg",
+      "entity.meowmeow.catdemon": "Cat Demon",
+      "biome.meowmeow.badbad": "BadBad",
+      "block.meowmeow.californiadirt": "California Dirt",
+      "block.meowmeow.plantofthecatdemon": "Plant Of The Cat Demon",
+      "block.meowmeow.california": "California"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "meowmeow",
+    "modName": "meowmeow",
+    "version": "1.0.0",
+    "author": "whiskersOfDeath, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "1.14.4",
+    "modElementsPackage": "net.mcreator.meowmeow",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000214217
+}

@@ -1,0 +1,49 @@
+{
+  "_fv": 6,
+  "_type": "plant",
+  "definition": {
+    "renderType": 3,
+    "texture": "plantofthecatdemon_texture",
+    "customModelName": "catdemon1",
+    "plantType": "normal",
+    "growapableSpawnType": "Nether",
+    "growapableMaxHeight": 7,
+    "name": "Plant Of The Cat Demon",
+    "creativeTab": {
+      "value": "DECORATIONS"
+    },
+    "hardness": 0.0,
+    "resistance": 0.0,
+    "luminance": 0.0,
+    "unbreakable": false,
+    "soundOnStep": {
+      "value": "PLANT"
+    },
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "isReplaceable": true,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "flammability": 2,
+    "fireSpreadSpeed": 0,
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [
+      "Surface",
+      "Nether"
+    ],
+    "restrictionBiomes": [],
+    "onNeighbourBlockChanges": {
+      "name": "PlantOfTheCatDemonNeighbourBlockChanges"
+    },
+    "onDestroyedByPlayer": {
+      "name": "PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer"
+    },
+    "onEntityCollides": {
+      "name": "PlantOfTheCatDemonNeighbourBlockChangesMobplayerCollidesWithPlant"
+    }
+  }
+}

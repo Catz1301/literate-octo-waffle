@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "meowmeow:blocks/californiadirt_texture",
+    "up": "meowmeow:blocks/californiadirt_texture",
+    "north": "meowmeow:blocks/californiadirt_texture",
+    "east": "meowmeow:blocks/californiadirt_texture",
+    "south": "meowmeow:blocks/californiadirt_texture",
+    "west": "meowmeow:blocks/californiadirt_texture",
+    "particle": "meowmeow:blocks/californiadirt_texture"
+  }
+}

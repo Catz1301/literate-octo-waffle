@@ -1,0 +1,20 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+
+[[mods]]
+modId="meowmeow"
+version="1.0.0"
+displayName="meowmeow"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://mcreator.net"
+authors="whiskersOfDeath, MCreator"
+
+[[dependencies.meowmeow]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
