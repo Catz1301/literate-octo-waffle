@@ -5,6 +5,8 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
@@ -18,6 +20,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.block.Blocks;
 
@@ -48,7 +51,7 @@ public class BadBadBiome extends MeowmeowElements.ModElement {
 	static class CustomBiome extends Biome {
 		public CustomBiome() {
 			super(new Biome.Builder().downfall(0.7999999999999999f).depth(0.11f).scale(0.25f).temperature(0.51f).precipitation(Biome.RainType.RAIN)
-					.category(Biome.Category.NETHER).waterColor(4159204).waterFogColor(329011)
+					.category(Biome.Category.NETHER).waterColor(-14329397).waterFogColor(-14329397)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(CaliforniaBlock.block.getDefaultState(),
 							CaliforniaDirtBlock.block.getDefaultState(), CaliforniaDirtBlock.block.getDefaultState())));
 			setRegistryName("badbad");
@@ -67,6 +70,24 @@ public class BadBadBiome extends MeowmeowElements.ModElement {
 									Feature.NORMAL_TREE, IFeatureConfig.NO_FEATURE_CONFIG),
 							Placement.COUNT_EXTRA_HEIGHTMAP, new AtSurfaceWithExtraConfig(3, 0.1F, 1)));
 			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(CatDemonEntity.entity, 15, 1, 5));
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public int getGrassColor(BlockPos pos) {
+			return -13942747;
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public int getFoliageColor(BlockPos pos) {
+			return -13942747;
+		}
+
+		@OnlyIn(Dist.CLIENT)
+		@Override
+		public int getSkyColorByTemp(float currentTemperature) {
+			return 1750619786;
 		}
 	}
 }

@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "plant",
   "definition": {
-    "renderType": 3,
+    "renderType": 12,
     "texture": "plantofthecatdemon_texture",
-    "customModelName": "catdemon1",
+    "customModelName": "Cross model",
     "plantType": "normal",
     "growapableSpawnType": "Nether",
     "growapableMaxHeight": 7,
@@ -42,8 +42,14 @@
     "onDestroyedByPlayer": {
       "name": "PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer"
     },
+    "onDestroyedByExplosion": {
+      "name": "PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer"
+    },
     "onEntityCollides": {
       "name": "PlantOfTheCatDemonNeighbourBlockChangesMobplayerCollidesWithPlant"
+    },
+    "onRightClicked": {
+      "name": "PlantOfTheCatDemonPlantRightClicked"
     }
   }
 }

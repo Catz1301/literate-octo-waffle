@@ -1,11 +1,7 @@
 {
-  "parent": "forge:item/default",
-  "loader": "forge:composite",
-  "parts": {
-    "part1": {
-      "loader": "forge:obj",
-      "model": "meowmeow:models/item/catdemon1.obj",
-      "ambientToFullbright": true
-    }
+  "parent": "block/cross",
+  "textures": {
+    "cross": "meowmeow:blocks/plantofthecatdemon_texture",
+    "particle": "meowmeow:blocks/plantofthecatdemon_texture"
   }
 }

@@ -2,14 +2,14 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "california_top_texture",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 3,
-    "customModelName": "catdemon1",
+    "texture": "californiadirt_texture",
+    "textureTop": "california_top_texture",
+    "textureLeft": "californiadirt_texture",
+    "textureFront": "californiadirt_texture",
+    "textureRight": "californiadirt_texture",
+    "textureBack": "californiadirt_texture",
+    "renderType": 10,
+    "customModelName": "Normal",
     "rotationMode": 0,
     "hasTransparency": true,
     "transparencyType": "SOLID",
@@ -21,12 +21,14 @@
     "Mz": 1.0,
     "faceShape": "SOLID",
     "name": "California",
-    "specialInfo": [],
+    "specialInfo": [
+      "California Grass"
+    ],
     "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "BUILDING_BLOCKS"
+      "value": "CUSTOM:MeowMeow"
     },
     "destroyTool": "Not specified",
     "affectedBySilkTouch": true,
@@ -36,7 +38,7 @@
     "dropAmount": 1,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
-    "plantsGrowOn": false,
+    "plantsGrowOn": true,
     "canProvidePower": false,
     "lightOpacity": 0,
     "material": {
@@ -56,7 +58,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "GROUND"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -65,7 +67,7 @@
     "particleToSpawn": {
       "value": "VILLAGER_ANGRY"
     },
-    "particleSpawningShape": "Top",
+    "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 1,
     "particleSpawningCondition": "ALWAYS",

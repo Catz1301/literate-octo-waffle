@@ -26,13 +26,13 @@
     "treeFruits": {
       "value": ""
     },
-    "customColors": false,
+    "customColors": true,
     "airColor": {
-      "value": -5916161,
+      "value": 1750619786,
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -13261999,
+      "value": -13942747,
       "falpha": 0.0
     },
     "waterColor": {

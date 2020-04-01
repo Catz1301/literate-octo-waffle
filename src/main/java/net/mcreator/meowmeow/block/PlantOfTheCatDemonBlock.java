@@ -19,7 +19,10 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.Explosion;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
 import net.minecraft.potion.Effects;
 import net.minecraft.item.ItemStack;
@@ -36,6 +39,7 @@ import net.minecraft.block.FlowerBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonPlantRightClickedProcedure;
 import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonNeighbourBlockChangesProcedure;
 import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure;
 import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonNeighbourBlockChangesMobplayerCollidesWithPlantProcedure;
@@ -159,6 +163,37 @@ public class PlantOfTheCatDemonBlock extends MeowmeowElements.ModElement {
 				PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
+		}
+
+		@Override
+		public void onExplosionDestroy(World world, BlockPos pos, Explosion e) {
+			super.onExplosionDestroy(world, pos, e);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
+		public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity entity, Hand hand, BlockRayTraceResult hit) {
+			boolean retval = super.onBlockActivated(state, world, pos, entity, hand, hit);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			Direction direction = hit.getFace();
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				PlantOfTheCatDemonPlantRightClickedProcedure.executeProcedure($_dependencies);
+			}
+			return true;
 		}
 	}
 }
