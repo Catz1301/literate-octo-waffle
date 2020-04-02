@@ -1,0 +1,30 @@
+{
+  "_fv": 6,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "bombertool_texture",
+    "customModelName": "Normal",
+    "name": "Bomber",
+    "creativeTab": {
+      "value": "CUSTOM:MeowMeow"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 654,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 3,
+    "blocksAffected": [
+      {
+        "value": "CUSTOM:DeathBlock"
+      }
+    ],
+    "hasGlow": false,
+    "repairItems": [],
+    "onRightClickedInAir": {
+      "name": "BomberRightClickedInAir"
+    }
+  }
+}

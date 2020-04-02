@@ -1,8 +1,10 @@
 {
   "item.meowmeow.catdemon": "Cat Demon Spawn Egg",
+  "item.meowmeow.bomber": "Bomber",
   "entity.meowmeow.catdemon": "Cat Demon",
   "biome.meowmeow.badbad": "BadBad",
   "block.meowmeow.californiadirt": "California Dirt",
+  "block.meowmeow.deathblock": "Death Block",
   "block.meowmeow.plantofthecatdemon": "Plant Of The Cat Demon",
   "itemGroup.tabmeowmeow": "Meow Meow",
   "block.meowmeow.california": "California"

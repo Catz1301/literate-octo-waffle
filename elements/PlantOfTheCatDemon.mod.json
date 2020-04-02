@@ -35,18 +35,25 @@
       "Surface",
       "Nether"
     ],
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:BadBad"
+      },
+      {
+        "value": "nether"
+      }
+    ],
     "onNeighbourBlockChanges": {
       "name": "PlantOfTheCatDemonNeighbourBlockChanges"
     },
     "onDestroyedByPlayer": {
-      "name": "PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer"
+      "name": "PlantOfTheCatDemonPlantDestroyedByPlayer"
     },
     "onDestroyedByExplosion": {
-      "name": "PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer"
+      "name": "PlantOfTheCatDemonPlantDestroyedByPlayer"
     },
     "onEntityCollides": {
-      "name": "PlantOfTheCatDemonNeighbourBlockChangesMobplayerCollidesWithPlant"
+      "name": "PlantOfTheCatDemonMobplayerCollidesWithPlant"
     },
     "onRightClicked": {
       "name": "PlantOfTheCatDemonPlantRightClicked"

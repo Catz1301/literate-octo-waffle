@@ -47,9 +47,10 @@ import net.minecraft.entity.ILivingEntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
-import net.minecraft.client.renderer.entity.model.PigModel;
+import net.minecraft.client.renderer.entity.model.OcelotModel;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.Minecraft;
@@ -86,7 +87,7 @@ public class CatDemonEntity extends MeowmeowElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	public void registerModels(ModelRegistryEvent event) {
 		RenderingRegistry.registerEntityRenderingHandler(CustomEntity.class, renderManager -> {
-			return new MobRenderer(renderManager, new PigModel(), 0.5f) {
+			return new MobRenderer(renderManager, new OcelotModel(0.0f), 0.5f) {
 				protected ResourceLocation getEntityTexture(Entity entity) {
 					return new ResourceLocation("meowmeow:textures/meowmeowcreativetabicon_texture.png");
 				}
@@ -120,6 +121,7 @@ public class CatDemonEntity extends MeowmeowElements.ModElement {
 			this.goalSelector.addGoal(1, new SwimGoal(this));
 			this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, AgeableEntity.class, false, false));
+			this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, PlayerEntity.class, false, false));
 			this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false));
 			this.goalSelector.addGoal(5, new BreakDoorGoal(this, e -> true));
 			this.goalSelector.addGoal(6, new RandomWalkingGoal(this, 1));

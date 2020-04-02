@@ -8,26 +8,26 @@ import net.minecraft.entity.effect.LightningBoltEntity;
 import net.mcreator.meowmeow.MeowmeowElements;
 
 @MeowmeowElements.ModElement.Tag
-public class PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure extends MeowmeowElements.ModElement {
-	public PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure(MeowmeowElements instance) {
-		super(instance, 3);
+public class PlantOfTheCatDemonPlantDestroyedByPlayerProcedure extends MeowmeowElements.ModElement {
+	public PlantOfTheCatDemonPlantDestroyedByPlayerProcedure(MeowmeowElements instance) {
+		super(instance, 9);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer!");
+			System.err.println("Failed to load dependency x for procedure PlantOfTheCatDemonPlantDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer!");
+			System.err.println("Failed to load dependency y for procedure PlantOfTheCatDemonPlantDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer!");
+			System.err.println("Failed to load dependency z for procedure PlantOfTheCatDemonPlantDestroyedByPlayer!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayer!");
+			System.err.println("Failed to load dependency world for procedure PlantOfTheCatDemonPlantDestroyedByPlayer!");
 			return;
 		}
 		int x = (int) dependencies.get("x");

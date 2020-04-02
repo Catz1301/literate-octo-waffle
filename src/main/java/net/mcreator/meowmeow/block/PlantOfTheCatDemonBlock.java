@@ -22,6 +22,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
 import net.minecraft.potion.Effects;
@@ -40,9 +41,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonPlantRightClickedProcedure;
+import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonPlantDestroyedByPlayerProcedure;
 import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonNeighbourBlockChangesProcedure;
-import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure;
-import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonNeighbourBlockChangesMobplayerCollidesWithPlantProcedure;
+import net.mcreator.meowmeow.procedures.PlantOfTheCatDemonMobplayerCollidesWithPlantProcedure;
 import net.mcreator.meowmeow.MeowmeowElements;
 
 import java.util.Random;
@@ -85,6 +86,13 @@ public class PlantOfTheCatDemonBlock extends MeowmeowElements.ModElement {
 			}
 		};
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
+			boolean biomeCriteria = false;
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("meowmeow:badbad")))
+				biomeCriteria = true;
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("nether")))
+				biomeCriteria = true;
+			if (!biomeCriteria)
+				continue;
 			biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
 					Biome.createDecoratedFeature(feature, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(5)));
 		}
@@ -144,7 +152,11 @@ public class PlantOfTheCatDemonBlock extends MeowmeowElements.ModElement {
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("entity", entity);
-				PlantOfTheCatDemonNeighbourBlockChangesMobplayerCollidesWithPlantProcedure.executeProcedure($_dependencies);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				PlantOfTheCatDemonMobplayerCollidesWithPlantProcedure.executeProcedure($_dependencies);
 			}
 		}
 
@@ -160,7 +172,7 @@ public class PlantOfTheCatDemonBlock extends MeowmeowElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+				PlantOfTheCatDemonPlantDestroyedByPlayerProcedure.executeProcedure($_dependencies);
 			}
 			return retval;
 		}
@@ -177,7 +189,7 @@ public class PlantOfTheCatDemonBlock extends MeowmeowElements.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				PlantOfTheCatDemonNeighbourBlockChangesPlantDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+				PlantOfTheCatDemonPlantDestroyedByPlayerProcedure.executeProcedure($_dependencies);
 			}
 		}
 

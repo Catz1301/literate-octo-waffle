@@ -9,7 +9,7 @@ import net.mcreator.meowmeow.MeowmeowElements;
 @MeowmeowElements.ModElement.Tag
 public class CatDemonOnInitialEntitySpawnProcedure extends MeowmeowElements.ModElement {
 	public CatDemonOnInitialEntitySpawnProcedure(MeowmeowElements instance) {
-		super(instance, 8);
+		super(instance, 11);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
@@ -34,7 +34,6 @@ public class CatDemonOnInitialEntitySpawnProcedure extends MeowmeowElements.ModE
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		if (world instanceof ServerWorld)
-			((ServerWorld) world).addLightningBolt(
-					new LightningBoltEntity(world, (int) (x + (Math.random() * 0)), (int) y, (int) (z + (Math.random() * 0)), false));
+			((ServerWorld) world).addLightningBolt(new LightningBoltEntity(world, (int) x, (int) y, (int) z, false));
 	}
 }

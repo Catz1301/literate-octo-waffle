@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "meowmeow:blocks/tobenamed_texture",
+    "particle": "meowmeow:blocks/tobenamed_texture"
+  }
+}
